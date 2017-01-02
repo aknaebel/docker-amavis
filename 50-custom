@@ -1,0 +1,8 @@
+@local_domains_acl = qw(.);
+$notify_method  = 'smtp:[mail]:10025';
+#$inet_socket_bind = '0.0.0.0'];
+$inet_socket_bind = undef;
+@inet_acl = qw( 127.0.0.1 [::1] 172.18.0.0/16 );
+$forward_method = 'smtp:[mail]:10025';
+$requeue_method = 'smtp:[mail]:25';
+$localhost_name = '##HOSTNAME##';
