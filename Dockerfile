@@ -3,11 +3,11 @@ MAINTAINER Alain Knaebel, <alain.knaebel@aknaebel.fr>
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN echo "deb http://fr.archive.ubuntu.com/ubuntu/ xenial main restricted universe multiverse" >> /etc/apt/sources.list \
- && echo "deb http://fr.archive.ubuntu.com/ubuntu/ xenial-updates main restricted universe multiverse" >> /etc/apt/sources.list \
- && echo "deb http://fr.archive.ubuntu.com/ubuntu/ xenial-backports main restricted universe multiverse" >> /etc/apt/sources.list \
- && echo "deb http://fr.archive.ubuntu.com/ubuntu/ xenial-proposed main restricted universe multiverse" >> /etc/apt/sources.list \
- && echo "deb http://security.ubuntu.com/ubuntu/ xenial-security main restricted universe multiverse" >> /etc/apt/sources.list \
+RUN echo "deb http://fr.archive.ubuntu.com/ubuntu/ bionic main restricted universe multiverse" >> /etc/apt/sources.list \
+ && echo "deb http://fr.archive.ubuntu.com/ubuntu/ bionic-updates main restricted universe multiverse" >> /etc/apt/sources.list \
+ && echo "deb http://fr.archive.ubuntu.com/ubuntu/ bionic-backports main restricted universe multiverse" >> /etc/apt/sources.list \
+ && echo "deb http://fr.archive.ubuntu.com/ubuntu/ bionic-proposed main restricted universe multiverse" >> /etc/apt/sources.list \
+ && echo "deb http://security.ubuntu.com/ubuntu/ bionic-security main restricted universe multiverse" >> /etc/apt/sources.list \
  && apt-get update \
  && apt-get install -y amavisd-new spamassassin clamav-daemon \
 			libnet-dns-perl libmail-spf-perl pyzor razor \
